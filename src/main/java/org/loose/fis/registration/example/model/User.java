@@ -2,17 +2,39 @@ package org.loose.fis.registration.example.model;
 
 public class User {
 
+    private String firstname;
+    private String lastname;
     private String username;
     private String password;
     private String role;
+    private String email;
 
     public User() {
     }
 
-    public User(String username, String password, String role) {
+    public User(String firstname,String lastname,String username, String password, String role,String email) {
+        this.firstname=firstname;
+        this.lastname=lastname;
         this.username = username;
         this.password = password;
         this.role = role;
+        this.email=email;
+    }
+
+    public String getFirstname(){
+        return firstname;
+    }
+
+    public void setFirstname(String firstname){
+        this.firstname=firstname;
+    }
+
+    public String getLastname(){
+        return lastname;
+    }
+
+    public void setLastname(String lastname){
+        this.lastname=lastname;
     }
 
     public String getUsername() {
@@ -37,6 +59,14 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getEmail(){
+        return email;
+    }
+
+    public void setEmail(String email){
+        this.email=email;
     }
 
     @Override

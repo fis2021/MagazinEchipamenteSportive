@@ -33,9 +33,9 @@ public class UserService {
         });
     }
 
-    public static void addUser(String username, String password, String role) throws UserAlreadyExistsException {
+    public static void addUser(String firstname,String lastname,String username, String password, String role,String email) throws UserAlreadyExistsException {
         checkUserDoesNotAlreadyExist(username);
-        users.add(new User(username, encodePassword(username, password), role));
+        users.add(new User(firstname,lastname,username, encodePassword(username, password), role,email));
         persistUsers();
     }
 
