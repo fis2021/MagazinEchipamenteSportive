@@ -18,17 +18,53 @@ public class RegistrationController {
     private TextField usernameField;
     @FXML
     private ChoiceBox role;
-
+    @FXML
+    private TextField firstnameField;
+    @FXML
+    private TextField lastnameField;
+    @FXML
+    private TextField emailField;
     @FXML
     public void initialize() {
-        role.getItems().addAll("Client", "Admin");
+        role.getItems().addAll("Client", "Manager");
     }
 
     @FXML
     public void handleRegisterAction() {
         try {
-            UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue());
-            registrationMessage.setText("Account created successfully!");
+            if(firstnameField.getText().trim().isEmpty())
+            {
+                registrationMessage.setText("Firstname missing!");
+            }
+            else
+            if(lastnameField.getText().trim().isEmpty())
+            {
+                registrationMessage.setText("Lastname missing!");
+            }
+            else
+            if(usernameField.getText().trim().isEmpty())
+            {
+                registrationMessage.setText("Username missing!");
+            }
+            else
+            if(passwordField.getText().trim().isEmpty())
+            {
+                registrationMessage.setText("Password missing!");
+            }
+            else
+            if((String)role.getValue()==null)
+            {
+                registrationMessage.setText("Select role!");
+            }
+            else
+            if(emailField.getText().trim().isEmpty())
+            {
+                registrationMessage.setText("E-mail missing!");
+            }
+            else {
+                UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue(),firstnameField.getText(),lastnameField.getText(),emailField.getText());
+                registrationMessage.setText("Account created successfully!");
+            }
         } catch (UsernameAlreadyExistsException e) {
             registrationMessage.setText(e.getMessage());
         }
