@@ -10,8 +10,6 @@
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
     </padding>
-    <Text id="title-text" text="Registration" GridPane.columnIndex="1" GridPane.columnSpan="2"
-          GridPane.rowIndex="0"/>
 
     <Label text="Firstname:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
