@@ -8,25 +8,18 @@ import javafx.stage.Stage;
 import org.loose.fis.proiect.services.FileSystemService;
 import org.loose.fis.proiect.services.UserService;
 
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        initDirectory();
-        UserService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
+    public void start (Stage primaryStage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("StartPage.fxml"));
         primaryStage.setTitle("Magazin de Echipamente Sportive");
         primaryStage.setScene(new Scene(root, 350, 400));
         primaryStage.show();
-    }
-
-    private void initDirectory() {
-        Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
-        if (!Files.exists(applicationHomePath))
-            applicationHomePath.toFile().mkdirs();
     }
 
 
