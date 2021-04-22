@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.dizitart.no2.exceptions.NitriteException;
 import org.loose.fis.proiect.services.FileSystemService;
 import org.loose.fis.proiect.services.UserService;
 import javafx.scene.control.Button;
@@ -21,23 +22,29 @@ public class StartPageController
     @FXML
     public void handleRegistrationAction() throws Exception
     {
-        Stage Secondary = new Stage();
+        Stage Registration = new Stage();
         initDirectory();
         UserService.initDatabase();
         Parent registration = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
-        Secondary.setTitle("Registration");
-        Secondary.setScene(new Scene(registration, 350, 400));
-        Secondary.show();
+        Registration.setTitle("Registration");
+        Registration.setScene(new Scene(registration, 350, 400));
+        Registration.show();
 
     }
 
     @FXML
-    public void handleSignInAction()
+    public void handleSignInAction() throws Exception , NitriteException
     {
+       Stage SignIn= new Stage();
+       Parent signin = FXMLLoader.load(getClass().getClassLoader().getResource("SignIn.fxml"));
+       SignIn.setTitle("Registration");
+       SignIn.setScene(new Scene(signin, 350, 400));
+       SignIn.show();
 
     }
 
-    private void initDirectory() {
+    private void initDirectory()
+    {
         Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
         if (!Files.exists(applicationHomePath))
             applicationHomePath.toFile().mkdirs();
