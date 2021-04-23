@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ManagerPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ManagerPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ClientPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ClientPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/StartPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/SignInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/SignInController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/StartPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/StartPageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -30,14 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="ProjectId" id="1qYkKz0mxtd0yskrEEaxmgkVDGz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
