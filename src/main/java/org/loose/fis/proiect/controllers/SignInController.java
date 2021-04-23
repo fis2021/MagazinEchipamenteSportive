@@ -61,7 +61,7 @@ public class SignInController
         {
             for (User user : userRepository.find())
             {
-                if (Objects.equals(usernameField.getText(), user.getUsername()))
+                if (Objects.equals(usernameField.getText(),user.getUsername()))
                 {
                     if (Objects.equals(encodePassword(usernameField.getText(),passwordField.getText()),user.getPassword()))
                     {
@@ -83,12 +83,14 @@ public class SignInController
                             Manager.show();
 
                         }
+
                     }
+
                     else
                     {
                         SignInMessage.setText("Incorrect Password!");
                     }
-
+                  break;
                 }
                 else
                     {
