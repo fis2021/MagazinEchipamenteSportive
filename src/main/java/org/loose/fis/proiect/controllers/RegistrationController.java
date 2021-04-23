@@ -1,10 +1,14 @@
 package org.loose.fis.proiect.controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import org.loose.fis.proiect.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.proiect.services.UserService;
 
@@ -68,5 +72,14 @@ public class RegistrationController {
         } catch (UsernameAlreadyExistsException e) {
             registrationMessage.setText(e.getMessage());
         }
+    }
+
+    public void handleBackAction() throws Exception
+    {
+        Stage Back= new Stage();
+        Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("StartPage.fxml"));
+        Back.setTitle("StartPage");
+        Back.setScene(new Scene(back, 350, 400));
+        Back.show();
     }
 }
