@@ -37,6 +37,11 @@
     <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
 
     <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="8">
+        <Button onAction="#handleBackAction" text="Back"/>
+    </HBox>
+
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="8">
         <Button onAction="#handleRegisterAction" text="Register"/>
     </HBox>
