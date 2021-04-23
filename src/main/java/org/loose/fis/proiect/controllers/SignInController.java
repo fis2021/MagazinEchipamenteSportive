@@ -67,7 +67,11 @@ public class SignInController
                     {
                         if(user.getRole().equals("Client"))
                         {
-
+                            Stage Client= new Stage();
+                            Parent client = FXMLLoader.load(getClass().getClassLoader().getResource("ClientPage.fxml"));
+                            Client.setTitle("ClientPage");
+                            Client.setScene(new Scene(client, 350, 400));
+                            Client.show();
 
                         }
                         if(user.getRole().equals("Manager"))
