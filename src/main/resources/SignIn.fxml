@@ -28,6 +28,11 @@
         <Button onAction="#handleSignInAction" text="Sign In" prefWidth="90" prefHeight="70"/>
     </HBox>
 
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="12">
+        <Button onAction="#handleBackAction" text="Back"/>
+    </HBox>
+
+
     <padding>
         <Insets bottom="25.0" left="25.0" right="30.0" top="25.0"/>
     </padding>
