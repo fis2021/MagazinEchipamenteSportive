@@ -1,2 +1,3 @@
-org\loose\fis\proiect\controllers\StartPageController.class
+org\loose\fis\proiect\controllers\ManagerPageController.class
 org\loose\fis\proiect\controllers\SignInController.class
+org\loose\fis\proiect\controllers\StartPageController.class
