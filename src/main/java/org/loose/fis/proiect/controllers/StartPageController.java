@@ -37,7 +37,7 @@ public class StartPageController
     {
        Stage SignIn= new Stage();
        Parent signin = FXMLLoader.load(getClass().getClassLoader().getResource("SignIn.fxml"));
-       SignIn.setTitle("Registration");
+       SignIn.setTitle("Sign In");
        SignIn.setScene(new Scene(signin, 350, 400));
        SignIn.show();
 
