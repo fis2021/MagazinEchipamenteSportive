@@ -34,7 +34,7 @@ public class RegistrationController {
     }
 
     @FXML
-    public void handleRegisterAction() {
+    public void handleRegisterAction() throws Exception{
         try {
             if(firstnameField.getText().trim().isEmpty())
             {
@@ -68,6 +68,11 @@ public class RegistrationController {
             else {
                 UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue(),firstnameField.getText(),lastnameField.getText(),emailField.getText());
                 registrationMessage.setText("Account created successfully!");
+                Stage SignIn= new Stage();
+                Parent signin = FXMLLoader.load(getClass().getClassLoader().getResource("SignIn.fxml"));
+                SignIn.setTitle("SignIn");
+                SignIn.setScene(new Scene(signin, 350, 400));
+                SignIn.show();
             }
         } catch (UsernameAlreadyExistsException e) {
             registrationMessage.setText(e.getMessage());
