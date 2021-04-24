@@ -26,7 +26,7 @@
 
 
     <HBox alignment="CENTER" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0">
-        <Button textAlignment="CENTER" onAction="#handleRegistrationAction" text="Registration" prefWidth="200" prefHeight="80">
+        <Button fx:id="registrationbutton" textAlignment="CENTER" onAction="#handleRegistrationAction" text="Registration" prefWidth="200" prefHeight="80">
         <font>
             <Font size="30.0"/>
         </font>
@@ -36,7 +36,7 @@
 
 
     <HBox alignment="CENTER" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
-        <Button textAlignment="CENTER" onAction="#handleSignInAction" text="Sign in"  prefWidth="200" prefHeight="80">
+        <Button fx:id="signinbutton" textAlignment="CENTER" onAction="#handleSignInAction" text="Sign in"  prefWidth="200" prefHeight="80">
         <font>
             <Font size="30.0"/>
         </font>

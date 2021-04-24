@@ -9,6 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.scene.control.*;
 import org.loose.fis.proiect.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.proiect.services.UserService;
 
@@ -28,6 +29,10 @@ public class RegistrationController {
     private TextField lastnameField;
     @FXML
     private TextField emailField;
+    @FXML
+    private Button backbutton;
+    @FXML
+    private Button registerbutton;
     @FXML
     public void initialize() {
         role.getItems().addAll("Client", "Manager");
@@ -73,6 +78,7 @@ public class RegistrationController {
                 SignIn.setTitle("SignIn");
                 SignIn.setScene(new Scene(signin, 350, 400));
                 SignIn.show();
+                cancelRegistration();
             }
         } catch (UsernameAlreadyExistsException e) {
             registrationMessage.setText(e.getMessage());
@@ -86,5 +92,10 @@ public class RegistrationController {
         Back.setTitle("StartPage");
         Back.setScene(new Scene(back, 350, 400));
         Back.show();
+        cancelRegistration();
+    }
+    public void cancelRegistration()
+    {
+        registerbutton.getScene().getWindow().hide();
     }
 }

@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ClientPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ClientPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ManagerPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ManagerPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/StartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ClientPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ClientPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ManagerPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ManagerPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SignIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SignIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StartPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/register.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
