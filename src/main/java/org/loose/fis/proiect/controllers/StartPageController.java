@@ -11,13 +11,16 @@ import org.loose.fis.proiect.services.FileSystemService;
 import org.loose.fis.proiect.services.UserService;
 import javafx.scene.control.Button;
 
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class StartPageController
 {
+    @FXML
+    private Button registrationbutton;
+    @FXML
+    private Button signinbutton;
 
     @FXML
     public void handleRegistrationAction() throws Exception
@@ -29,6 +32,7 @@ public class StartPageController
         Registration.setTitle("Registration");
         Registration.setScene(new Scene(registration, 350, 400));
         Registration.show();
+        CancelStartPage();
 
     }
 
@@ -40,7 +44,7 @@ public class StartPageController
        SignIn.setTitle("Sign In");
        SignIn.setScene(new Scene(signin, 350, 400));
        SignIn.show();
-
+       CancelStartPage();
     }
 
     private void initDirectory()
@@ -48,6 +52,10 @@ public class StartPageController
         Path applicationHomePath = FileSystemService.APPLICATION_HOME_PATH;
         if (!Files.exists(applicationHomePath))
             applicationHomePath.toFile().mkdirs();
+    }
+    public void CancelStartPage()
+    {
+        registrationbutton.getScene().getWindow().hide();
     }
 
 

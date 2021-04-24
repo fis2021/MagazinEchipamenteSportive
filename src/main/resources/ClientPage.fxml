@@ -12,18 +12,18 @@
           fx:controller="org.loose.fis.proiect.controllers.ClientPageController">
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
-        <Button onAction="#handleBuyProductsAction" text="Buy products"/>
+        <Button fx:id="buyproductsbutton" onAction="#handleBuyProductsAction" text="Buy products"/>
     </HBox>
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1">
-        <Button onAction="#handleSeeAllYourOrdersAction" text="See all your orders"/>
+        <Button fx:id="seeallyourordersbutton" onAction="#handleSeeAllYourOrdersAction" text="See all your orders"/>
     </HBox>
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
-        <Button onAction="#handleSeeProductsListAction" text="See products list"/>
+        <Button fx:id="seeproductslistbutton" onAction="#handleSeeProductsListAction" text="See products list"/>
     </HBox>
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="8">
-        <Button onAction="#handleLogoutClientAction" text="Logout"/>
+        <Button fx:id="logoutbutton" onAction="#handleLogoutClientAction" text="Logout"/>
     </HBox>
 </GridPane>

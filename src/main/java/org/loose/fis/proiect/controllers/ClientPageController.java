@@ -1,12 +1,22 @@
 package org.loose.fis.proiect.controllers;
 
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.control.*;
 
 public class ClientPageController
 {
+    @FXML
+    private Button buyproductsbutton;
+    @FXML
+    private Button seeallyourordersbutton;
+    @FXML
+    private Button seeproductslistbutton;
+    @FXML
+    private Button logoutbutton;
 
     public void handleBuyProductsAction()
     {
@@ -32,5 +42,10 @@ public class ClientPageController
         LogoutClient.setTitle("StartPage");
         LogoutClient.setScene(new Scene(logoutclient, 350, 400));
         LogoutClient.show();
+        cancelClientPage();
+    }
+    public void cancelClientPage()
+    {
+        logoutbutton.getScene().getWindow().hide();
     }
 }

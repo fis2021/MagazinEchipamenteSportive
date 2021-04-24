@@ -12,6 +12,7 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.proiect.services.UserService;
 import org.loose.fis.proiect.model.User;
+import javafx.scene.control.*;
 
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
@@ -31,6 +32,10 @@ public class SignInController
     private PasswordField passwordField;
     @FXML
     private TextField usernameField;
+    @FXML
+    private Button backbutton;
+    @FXML
+    private Button signinbutton;
 
     private static ObjectRepository<User> userRepository;
 
@@ -72,7 +77,7 @@ public class SignInController
                             Client.setTitle("ClientPage");
                             Client.setScene(new Scene(client, 350, 400));
                             Client.show();
-
+                            cancelSignIn();
                         }
                         if(user.getRole().equals("Manager"))
                         {
@@ -81,7 +86,7 @@ public class SignInController
                             Manager.setTitle("ManagerPage");
                             Manager.setScene(new Scene(manager, 350, 400));
                             Manager.show();
-
+                            cancelSignIn();
                         }
 
                     }
@@ -99,7 +104,10 @@ public class SignInController
             }
         }
     }
-
+    public void cancelSignIn()
+    {
+        signinbutton.getScene().getWindow().hide();
+    }
     private static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
@@ -128,6 +136,7 @@ public class SignInController
         Back.setTitle("StartPage");
         Back.setScene(new Scene(back, 350, 400));
         Back.show();
+        cancelSignIn();
     }
 
 }

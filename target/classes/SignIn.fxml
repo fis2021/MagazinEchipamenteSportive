@@ -25,11 +25,11 @@
 
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="12">
-        <Button onAction="#handleSignInAction" text="Sign In" prefWidth="90" prefHeight="70"/>
+        <Button fx:id="signinbutton" onAction="#handleSignInAction" text="Sign In" prefWidth="90" prefHeight="70"/>
     </HBox>
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="12">
-        <Button onAction="#handleBackAction" text="Back"/>
+        <Button fx:id="backbutton" onAction="#handleBackAction" text="Back"/>
     </HBox>
 
 
