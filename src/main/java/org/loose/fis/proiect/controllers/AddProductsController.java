@@ -6,9 +6,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.dizitart.no2.Nitrite;
+import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.proiect.model.Product;
+import org.loose.fis.proiect.model.User;
+import org.loose.fis.proiect.services.ProductService;
+import org.loose.fis.proiect.services.UserService;
 
 import java.io.IOException;
+
+import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 
 public class AddProductsController {
     @FXML
@@ -25,10 +34,42 @@ public class AddProductsController {
     private Button addproductbutton;
     @FXML
     private Button backbutton;
+    @FXML
+    private Text AddProductMessage;
 
-    public void handleAddProductAction()
+
+    public void handleAddProductAction() throws Exception
     {
-
+        if(nameField.getText().trim().isEmpty())
+        {
+            AddProductMessage.setText("Name missing!");
+        }
+        else
+        if(priceField.getText().trim().isEmpty())
+        {
+            AddProductMessage.setText("Price missing!");
+        }
+        else
+        if(stockField.getText().trim().isEmpty())
+        {
+            AddProductMessage.setText("Stock missing!");
+        }
+        else
+        if(categoryField.getText().trim().isEmpty())
+        {
+            AddProductMessage.setText("Category missing!");
+        }
+        else
+        if(companyField.getText().trim().isEmpty())
+        {
+            AddProductMessage.setText("Company missing!");
+        }
+        else
+        {
+            ProductService.addProduct(nameField.getText(), priceField.getText(), stockField.getText(),categoryField.getText(),companyField.getText());
+            AddProductMessage.setText("Product added!");
+            cancelAddProducts();
+        }
     }
     public void handleBackAction() throws Exception
     {
