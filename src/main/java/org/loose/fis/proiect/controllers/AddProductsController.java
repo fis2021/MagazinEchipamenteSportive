@@ -68,7 +68,6 @@ public class AddProductsController {
         {
             ProductService.addProduct(nameField.getText(), priceField.getText(), stockField.getText(),categoryField.getText(),companyField.getText());
             AddProductMessage.setText("Product added!");
-            cancelAddProducts();
         }
     }
     public void handleBackAction() throws Exception
