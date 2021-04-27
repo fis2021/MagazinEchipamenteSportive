@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
+import org.loose.fis.proiect.services.ProductService;
 
 public class ManagerPageController
 {
@@ -32,6 +33,7 @@ public class ManagerPageController
 
     public void handleAddProductsAction() throws Exception
     {
+        ProductService.initDatabase();
         Stage AddProduct= new Stage();
         Parent addproduct = FXMLLoader.load(getClass().getClassLoader().getResource("AddProducts.fxml"));
         AddProduct.setTitle("Add product");

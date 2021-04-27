@@ -19,19 +19,12 @@ import java.nio.file.Path;
 public class Main extends Application {
 
     @Override
-    public void start (Stage primaryStage) throws Exception {
-
-
-
-
-
+    public void start (Stage primaryStage) throws Exception
+    {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("StartPage.fxml"));
         primaryStage.setTitle("Magazin de Echipamente Sportive");
         primaryStage.setScene(new Scene(root, 350, 400));
         primaryStage.show();
-
-
-
     }
 
 
