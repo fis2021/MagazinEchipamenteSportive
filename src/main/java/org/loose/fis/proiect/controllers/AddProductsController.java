@@ -14,8 +14,8 @@ import org.loose.fis.proiect.model.Product;
 import org.loose.fis.proiect.model.User;
 import org.loose.fis.proiect.services.ProductService;
 import org.loose.fis.proiect.services.UserService;
-
 import java.io.IOException;
+import java.util.Objects;
 
 import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 
@@ -66,8 +66,15 @@ public class AddProductsController {
         }
         else
         {
-            ProductService.addProduct(nameField.getText(), priceField.getText(), stockField.getText(),categoryField.getText(),companyField.getText());
-            AddProductMessage.setText("Product added!");
+            if(ProductService.checkProductAlreadyExist(nameField.getText(),stockField.getText())==1)
+            {
+                AddProductMessage.setText("Stock changed!");
+            }
+            else
+            {
+                ProductService.addProduct(nameField.getText(), priceField.getText(), stockField.getText(), categoryField.getText(), companyField.getText());
+                AddProductMessage.setText("Product added!");
+            }
         }
     }
     public void handleBackAction() throws Exception
