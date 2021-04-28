@@ -6,7 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
+import org.dizitart.no2.Nitrite;
+import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.proiect.model.Product;
 import org.loose.fis.proiect.services.ProductService;
+import org.loose.fis.proiect.controllers.ProductsListController;
+import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 
 public class ManagerPageController
 {
@@ -25,8 +30,13 @@ public class ManagerPageController
     @FXML
     private Button logoutbutton;
 
+
+
+
+
     public void handleProductsListAction() throws Exception
     {
+        ProductsListController.seeproduct();
         Stage ProductList= new Stage();
         Parent productlist = FXMLLoader.load(getClass().getClassLoader().getResource("SeeProductsList.fxml"));
         ProductList.setTitle("ProductList");
