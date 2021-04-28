@@ -2,6 +2,7 @@ org\loose\fis\proiect\controllers\AddProductsController.class
 org\loose\fis\proiect\model\Product.class
 org\loose\fis\proiect\controllers\ManagerPageController.class
 org\loose\fis\proiect\controllers\ClientPageController.class
+org\loose\fis\proiect\controllers\ProductsListController.class
 org\loose\fis\proiect\controllers\SignInController.class
 org\loose\fis\proiect\controllers\StartPageController.class
 org\loose\fis\proiect\services\ProductService.class

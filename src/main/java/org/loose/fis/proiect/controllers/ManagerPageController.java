@@ -25,9 +25,14 @@ public class ManagerPageController
     @FXML
     private Button logoutbutton;
 
-    public void handleProductsListAction()
+    public void handleProductsListAction() throws Exception
     {
-
+        Stage ProductList= new Stage();
+        Parent productlist = FXMLLoader.load(getClass().getClassLoader().getResource("SeeProductsList.fxml"));
+        ProductList.setTitle("ProductList");
+        ProductList.setScene(new Scene(productlist, 350, 400));
+        ProductList.show();
+        cancelManagerPage();
     }
 
 
