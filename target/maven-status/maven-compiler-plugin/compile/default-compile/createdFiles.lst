@@ -4,5 +4,6 @@ org\loose\fis\proiect\controllers\ManagerPageController.class
 org\loose\fis\proiect\controllers\ClientPageController.class
 org\loose\fis\proiect\controllers\ProductsListController.class
 org\loose\fis\proiect\controllers\SignInController.class
+org\loose\fis\proiect\controllers\ProductsListControllerClient.class
 org\loose\fis\proiect\controllers\StartPageController.class
 org\loose\fis\proiect\services\ProductService.class
