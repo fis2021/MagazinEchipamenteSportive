@@ -87,7 +87,12 @@ public class ProductsListController
 
     public void handleAddAction() throws Exception
     {
-
+        Stage Add= new Stage();
+        Parent add = FXMLLoader.load(getClass().getClassLoader().getResource("AddProducts.fxml"));
+        Add.setTitle("Add Product");
+        Add.setScene(new Scene(add, 350, 400));
+        Add.show();
+        cancelProductListPage();
     }
 
     public void handleEditAction() throws Exception
