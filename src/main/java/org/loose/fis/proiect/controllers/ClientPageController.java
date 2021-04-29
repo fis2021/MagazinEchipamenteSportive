@@ -44,6 +44,7 @@ public class ClientPageController
         ProductsListControllerClient controller = loader.getController();
         controller.set();
         Stage stage = (Stage) (seeproductslistbutton.getScene().getWindow());
+        stage.setTitle("Products List");
         stage.setScene(scene);
         stage.show();
 

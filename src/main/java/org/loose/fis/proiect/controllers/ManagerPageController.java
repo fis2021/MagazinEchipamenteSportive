@@ -44,6 +44,7 @@ public class ManagerPageController
         ProductsListController controller = loader.getController();
         controller.set();
         Stage stage = (Stage) (productslistbutton.getScene().getWindow());
+        stage.setTitle("Products List");
         stage.setScene(scene);
         stage.show();
     }
@@ -67,9 +68,19 @@ public class ManagerPageController
     }
 
 
-    public void handleEditProductsAction()
+    public void handleEditProductsAction() throws Exception
     {
-
+        cancelManagerPage();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("EditProducts.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        EditProductsController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (editproductsbutton.getScene().getWindow());
+        stage.setTitle("Edit Products");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
