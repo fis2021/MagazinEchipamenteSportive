@@ -36,6 +36,7 @@ public class ManagerPageController
 
     public void handleProductsListAction() throws Exception
     {
+        cancelManagerPage();
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getClassLoader().getResource("SeeProductsList.fxml"));
         Parent parent = loader.load();
@@ -45,15 +46,6 @@ public class ManagerPageController
         Stage stage = (Stage) (productslistbutton.getScene().getWindow());
         stage.setScene(scene);
         stage.show();
-        cancelManagerPage();
-        /*ProductsListController.initDatabase();
-        ProductsListController.seeproduct();
-        Stage ProductList= new Stage();
-        Parent productlist = FXMLLoader.load(getClass().getClassLoader().getResource("SeeProductsList.fxml"));
-        ProductList.setTitle("ProductList");
-        ProductList.setScene(new Scene(productlist, 350, 400));
-        ProductList.show();
-        cancelManagerPage();*/
     }
 
 
