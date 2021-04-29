@@ -26,51 +26,78 @@ import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 
 public class ProductsListController
 {
-    @FXML
-    private static ListView<String> namelist = new ListView <String>();
-    @FXML
-    private static ListView<String> pricelist = new ListView <String>();
-    @FXML
-    private static ListView<String> stocklist = new ListView <String>();
-    @FXML
-    private static ListView<String> categorylist = new ListView <String>();
-    @FXML
-    private static ListView<String> companylist = new ListView <String>();
 
-    private static ObjectRepository<Product> productRepository;
+    @FXML
+    private Button BackButton;
+
+
+    @FXML
+    private ListView<String> list = new ListView <String> ();
+
+
+
+
+    private static ObjectRepository <Product> productRepository;
 
 
 
 
     public static void initDatabase()
     {
+
         Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("products.db").toFile())
                 .openOrCreate("test", "test");
 
         productRepository = database.getRepository(Product.class);
+
     }
 
 
 
 
-    public static void seeproduct()
-     {
+    public void set()
+    {
+        initDatabase();
+        for(Product p : productRepository.find())
+        {
+            list.getItems().add("               "+ p.getName() + "                     "  + p.getPrice() +"                           " + p.getStock() + "                                " + p.getCategory() +"                          "+ p.getCompany());
 
-         initDatabase();
-
-         for (Product product : productRepository.find())
-         {
-             namelist.getItems().add(product.getName());
-             pricelist.getItems().add(product.getPrice());
-             stocklist.getItems().add(product.getStock());
-             categorylist.getItems().add(product.getCategory());
-             companylist.getItems().add(product.getCompany());
-
-         }
+        }
+    }
 
 
-     }
+    public void handleBackAction() throws Exception
+    {
+        Stage Back= new Stage();
+        Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ManagerPage.fxml"));
+        Back.setTitle("Manager Page");
+        Back.setScene(new Scene(back, 350, 400));
+        Back.show();
+        cancelProductListPage();
+    }
 
+
+
+    public void cancelProductListPage()
+    {
+        BackButton.getScene().getWindow().hide();
+    }
+
+
+    public void handleAddAction() throws Exception
+    {
+
+    }
+
+    public void handleEditAction() throws Exception
+    {
+
+    }
+
+    public void handleDeleteAction() throws Exception
+    {
+
+    }
 
 }
