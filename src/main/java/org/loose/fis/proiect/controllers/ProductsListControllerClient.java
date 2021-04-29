@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import org.dizitart.no2.Nitrite;
@@ -16,8 +17,8 @@ public class ProductsListControllerClient
 {
     @FXML
     private ListView<String> list = new ListView <String> ();
-
-
+    @FXML
+    private Button BackButton;
 
 
     private static ObjectRepository<Product> productRepository;
@@ -55,7 +56,12 @@ public class ProductsListControllerClient
 
     public void handleBackAction() throws Exception
     {
-
+        Stage Back= new Stage();
+        Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ClientPage.fxml"));
+        Back.setTitle("Client Page");
+        Back.setScene(new Scene(back, 350, 400));
+        Back.show();
+        cancelProductListPage();
 
     }
 
@@ -67,7 +73,10 @@ public class ProductsListControllerClient
     }
 
 
-
+    public void cancelProductListPage()
+    {
+        BackButton.getScene().getWindow().hide();
+    }
 
 
 }
