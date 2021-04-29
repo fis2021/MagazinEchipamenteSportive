@@ -60,6 +60,11 @@ public class EditProductsController
     }
     public void handleEditAction() throws Exception
     {
+        Stage Edit= new Stage();
+        Parent edit = FXMLLoader.load(getClass().getClassLoader().getResource("EditButtonFromEditProducts.fxml"));
+        Edit.setTitle("Edit the product");
+        Edit.setScene(new Scene(edit, 350, 400));
+        Edit.show();
 
     }
     public void cancelEditProductsPage()
