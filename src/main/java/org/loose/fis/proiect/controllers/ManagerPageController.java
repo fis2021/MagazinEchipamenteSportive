@@ -64,9 +64,19 @@ public class ManagerPageController
     }
 
 
-    public void handleDeleteProductsAction()
+    public void handleDeleteProductsAction() throws Exception
     {
-
+        cancelManagerPage();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("DeleteProducts.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        DeleteProductsController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (deleteproductsbutton.getScene().getWindow());
+        stage.setTitle("Delete Products");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
