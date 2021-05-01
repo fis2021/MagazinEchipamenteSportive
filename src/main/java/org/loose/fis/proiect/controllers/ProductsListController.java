@@ -99,6 +99,17 @@ public class ProductsListController
 
     public void handleEditAction() throws Exception
     {
+        database.close();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("EditProducts.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        EditProductsController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (BackButton.getScene().getWindow());
+        stage.setTitle("Edit Products");
+        stage.setScene(scene);
+        stage.show();
 
     }
 
