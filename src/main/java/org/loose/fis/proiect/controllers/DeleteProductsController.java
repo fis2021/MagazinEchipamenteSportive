@@ -47,14 +47,20 @@ public class DeleteProductsController
     {
 
 
-
-
     }
 
 
 
     public void handleBackAction() throws Exception
     {
+
+        database.close();
+        Stage Back= new Stage();
+        Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ManagerPage.fxml"));
+        Back.setTitle("Manager Page");
+        Back.setScene(new Scene(back, 350, 400));
+        Back.show();
+        cancelDeleteProductsPage();
 
     }
 
@@ -73,7 +79,7 @@ public class DeleteProductsController
 
 
 
-    public void cancelEditProductsPage()
+    public void cancelDeleteProductsPage()
     {
         BackButton.getScene().getWindow().hide();
     }
