@@ -45,7 +45,25 @@ public class DeleteProductsController
 
     public void handleDeleteAction() throws Exception
     {
-
+        Delete.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
+        if(!Delete.isDisable())
+        {
+            FXMLLoader loader=new FXMLLoader();
+            loader.setLocation(getClass().getClassLoader().getResource("EditButtonFromEditProducts.fxml"));
+            Parent parent = loader.load();
+            Scene scene = new Scene(parent);
+            EditButtonFromEditProductsController controller = loader.getController();
+            controller.set(list.getSelectionModel().getSelectedItem());
+            Stage stage = (Stage) (BackButton.getScene().getWindow());
+            stage.setTitle("Delete the product");
+            stage.setScene(scene);
+            stage.show();
+            database.close();
+        }
+        else
+        {
+            DeleteMessage.setText("Select an item!");
+        }
 
     }
 

@@ -116,6 +116,18 @@ public class ProductsListController
     public void handleDeleteAction() throws Exception
     {
 
+        database.close();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("DeleteProducts.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        DeleteProductsController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (BackButton.getScene().getWindow());
+        stage.setTitle("Delete Products");
+        stage.setScene(scene);
+        stage.show();
+
     }
 
 }
