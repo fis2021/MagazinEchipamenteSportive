@@ -22,14 +22,13 @@ public class ProductsListControllerClient
 
 
     private static ObjectRepository<Product> productRepository;
-
+    private static Nitrite database;
 
 
 
     public static void initDatabase()
     {
-
-        Nitrite database = Nitrite.builder()
+        database = Nitrite.builder()
                 .filePath(getPathToFile("products.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -45,9 +44,10 @@ public class ProductsListControllerClient
         initDatabase();
         for(Product p : productRepository.find())
         {
-            list.getItems().add("               "+ p.getName() + "                     "  + p.getPrice() +"                           " + p.getStock() + "                                " + p.getCategory() +"                          "+ p.getCompany());
+            list.getItems().add("Name: "+ p.getName() + "         Price: "  + p.getPrice() +"         Stock: " + p.getStock() + "         Category: " + p.getCategory() +"         Company:"+ p.getCompany());
 
         }
+        database.close();
     }
 
 
@@ -56,6 +56,7 @@ public class ProductsListControllerClient
 
     public void handleBackAction() throws Exception
     {
+        database.close();
         Stage Back= new Stage();
         Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ClientPage.fxml"));
         Back.setTitle("Client Page");

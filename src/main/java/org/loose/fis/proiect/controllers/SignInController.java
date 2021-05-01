@@ -38,10 +38,11 @@ public class SignInController
     private Button signinbutton;
 
     private static ObjectRepository<User> userRepository;
+    private static Nitrite database;
 
     public static void initDatabase()
     {
-        Nitrite database = Nitrite.builder()
+        database = Nitrite.builder()
                 .filePath(getPathToFile("registration-example.db").toFile())
                 .openOrCreate("test", "test");
 
@@ -52,7 +53,7 @@ public class SignInController
 
     public void handleSignInAction() throws Exception
     {
-      initDatabase();
+        initDatabase();
         if(usernameField.getText().trim().isEmpty())
         {
             SignInMessage.setText("Username missing!");
@@ -72,6 +73,7 @@ public class SignInController
                     {
                         if(user.getRole().equals("Client"))
                         {
+                            database.close();
                             Stage Client= new Stage();
                             Parent client = FXMLLoader.load(getClass().getClassLoader().getResource("ClientPage.fxml"));
                             Client.setTitle("ClientPage");
@@ -81,6 +83,7 @@ public class SignInController
                         }
                         if(user.getRole().equals("Manager"))
                         {
+                            database.close();
                             Stage Manager= new Stage();
                             Parent manager = FXMLLoader.load(getClass().getClassLoader().getResource("ManagerPage.fxml"));
                             Manager.setTitle("ManagerPage");

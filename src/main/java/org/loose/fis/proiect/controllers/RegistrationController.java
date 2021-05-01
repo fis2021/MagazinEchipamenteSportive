@@ -73,6 +73,7 @@ public class RegistrationController {
             else {
                 UserService.addUser(usernameField.getText(), passwordField.getText(), (String) role.getValue(),firstnameField.getText(),lastnameField.getText(),emailField.getText());
                 registrationMessage.setText("Account created successfully!");
+                UserService.CloseDatabase();
                 Stage SignIn= new Stage();
                 Parent signin = FXMLLoader.load(getClass().getClassLoader().getResource("SignIn.fxml"));
                 SignIn.setTitle("SignIn");
@@ -87,6 +88,7 @@ public class RegistrationController {
 
     public void handleBackAction() throws Exception
     {
+        UserService.CloseDatabase();
         Stage Back= new Stage();
         Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("StartPage.fxml"));
         Back.setTitle("StartPage");
