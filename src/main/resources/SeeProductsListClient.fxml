@@ -14,7 +14,6 @@
         <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Label text="Name                      Price                         Stock                         Category                    Company" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
         <Button fx:id="BackButton" mnemonicParsing="false" onAction="#handleBackAction" text="Back" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
             <GridPane.margin>
                 <Insets left="125.0" />

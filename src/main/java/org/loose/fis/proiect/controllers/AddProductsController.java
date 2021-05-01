@@ -40,6 +40,7 @@ public class AddProductsController {
 
     public void handleAddProductAction() throws Exception
     {
+        ProductService.CloseDatabase();
         if(nameField.getText().trim().isEmpty())
         {
             AddProductMessage.setText("Name missing!");
@@ -79,6 +80,7 @@ public class AddProductsController {
     }
     public void handleBackAction() throws Exception
     {
+        ProductService.CloseDatabase();
         Stage Back= new Stage();
         Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ManagerPage.fxml"));
         Back.setTitle("ManagerPage");
