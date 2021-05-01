@@ -52,13 +52,15 @@ public class ManagerPageController
 
     public void handleAddProductsAction() throws Exception
     {
-        ProductService.initDatabase();
+
+
         Stage AddProduct= new Stage();
         Parent addproduct = FXMLLoader.load(getClass().getClassLoader().getResource("AddProducts.fxml"));
         AddProduct.setTitle("Add product");
         AddProduct.setScene(new Scene(addproduct, 350, 400));
         AddProduct.show();
         cancelManagerPage();
+
     }
 
 
