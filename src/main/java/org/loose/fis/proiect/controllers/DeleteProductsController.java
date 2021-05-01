@@ -12,6 +12,8 @@ import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.proiect.model.Product;
 
+import java.util.Objects;
+
 import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 
 
@@ -48,8 +50,8 @@ public class DeleteProductsController
         Delete.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
         if(!Delete.isDisable())
         {
-            FXMLLoader loader=new FXMLLoader();
-            loader.setLocation(getClass().getClassLoader().getResource("EditButtonFromEditProducts.fxml"));
+            /*FXMLLoader loader=new FXMLLoader();
+            loader.setLocation(getClass().getClassLoader().getResource("DeleteProducts.fxml"));
             Parent parent = loader.load();
             Scene scene = new Scene(parent);
             EditButtonFromEditProductsController controller = loader.getController();
@@ -58,7 +60,48 @@ public class DeleteProductsController
             stage.setTitle("Delete the product");
             stage.setScene(scene);
             stage.show();
+            database.close();*/
+            initDatabase();
+            String s=  list.getSelectionModel().getSelectedItem() ;
+            String p = "";
+            int i,k=0,l=0,j = 0,t=0;
+            for(i=0;i<s.length()-9;i++)
+            {
+                if (s.charAt(i) == ':' && s.charAt(i + 1) == ' ' && t==0)
+                {
+                    k = i + 2;
+                    t++;
+                }
+                if (s.charAt(i) == ' ' && s.charAt(i+9)=='P')
+                    j = i - 1;
+
+            }
+            int x;
+            for(x=k;x<=j;x++)
+                p=p+ s.charAt(x);
+            for (Product pro : productRepository.find())
+                if (Objects.equals(pro.getName(),p))
+                {
+                    productRepository.remove(pro);
+                }
+
             database.close();
+
+
+            cancelDeleteProductsPage();
+            FXMLLoader loader=new FXMLLoader();
+            loader.setLocation(getClass().getClassLoader().getResource("DeleteProducts.fxml"));
+            Parent parent = loader.load();
+            Scene scene = new Scene(parent);
+            DeleteProductsController controller = loader.getController();
+            controller.set();
+            Stage stage = (Stage) (BackButton.getScene().getWindow());
+            stage.setTitle("Delete Products");
+            stage.setScene(scene);
+            stage.show();
+
+
+
         }
         else
         {
