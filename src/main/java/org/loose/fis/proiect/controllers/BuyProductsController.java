@@ -1,9 +1,13 @@
 package org.loose.fis.proiect.controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.proiect.model.Product;
@@ -41,7 +45,12 @@ public class BuyProductsController
 
     public void handleBackAction() throws Exception
     {
-
+        Stage Back= new Stage();
+        Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ClientPage.fxml"));
+        Back.setTitle("Client Page");
+        Back.setScene(new Scene(back, 350, 400));
+        Back.show();
+        cancelBuyProducts();
     }
 
     public void handleAddToCartAction() throws Exception
@@ -63,5 +72,10 @@ public class BuyProductsController
 
         }
         database.close();
+    }
+
+    public void cancelBuyProducts()
+    {
+        BackButton.getScene().getWindow().hide();
     }
 }
