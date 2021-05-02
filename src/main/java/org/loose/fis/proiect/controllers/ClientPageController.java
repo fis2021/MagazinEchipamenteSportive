@@ -22,9 +22,19 @@ public class ClientPageController
     @FXML
     private Button logoutbutton;
 
-    public void handleBuyProductsAction()
+    public void handleBuyProductsAction() throws Exception
     {
-
+        cancelClientPage();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("BuyProducts.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        BuyProductsController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (buyproductsbutton.getScene().getWindow());
+        stage.setTitle("Buy Products");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
