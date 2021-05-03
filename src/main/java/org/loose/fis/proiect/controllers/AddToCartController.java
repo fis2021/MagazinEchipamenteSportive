@@ -84,6 +84,10 @@ public class AddToCartController
                     {
                         p.setStock(String.valueOf(Integer.parseInt(p.getStock())-Integer.parseInt(stockfield.getText())));
                         productRepository.update(p);
+                        if(Integer.parseInt(p.getStock())==0)
+                        {
+                            productRepository.remove(p);
+                        }
                         AddToShoppingCartMessage.setText("Added to shopping cart!");
                     }
                 }
