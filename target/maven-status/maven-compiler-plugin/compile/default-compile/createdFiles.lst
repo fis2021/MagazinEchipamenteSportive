@@ -3,6 +3,7 @@ org\loose\fis\proiect\controllers\ClientPageController.class
 org\loose\fis\proiect\controllers\ProductsListController.class
 org\loose\fis\proiect\controllers\DeleteProductsController.class
 org\loose\fis\proiect\controllers\ProductsListControllerClient.class
+org\loose\fis\proiect\controllers\AddToCartController.class
 org\loose\fis\proiect\controllers\BuyProductsController.class
 org\loose\fis\proiect\model\Product.class
 org\loose\fis\proiect\controllers\ManagerPageController.class
