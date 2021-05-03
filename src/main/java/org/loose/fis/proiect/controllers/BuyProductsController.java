@@ -25,7 +25,7 @@ public class BuyProductsController
     @FXML
     private Button AddToCart;
     @FXML
-    private Text EditMessage;
+    private Text AddToCartMessage;
 
     private static ObjectRepository<Product> productRepository;
 
@@ -55,7 +55,21 @@ public class BuyProductsController
 
     public void handleAddToCartAction() throws Exception
     {
-        
+        AddToCart.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
+        if(!AddToCart.isDisable())
+        {
+            Stage AddToCart= new Stage();
+            Parent addtocart = FXMLLoader.load(getClass().getClassLoader().getResource("AddToCart.fxml"));
+            AddToCart.setTitle("Add to cart");
+            AddToCart.setScene(new Scene(addtocart, 350, 400));
+            AddToCart.show();
+            cancelBuyProducts();
+        }
+        else
+        {
+            AddToCartMessage.setText("Select an item!");
+        }
+
     }
 
     public void handleShoppingCartAction() throws Exception
