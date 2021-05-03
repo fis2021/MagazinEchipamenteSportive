@@ -58,12 +58,16 @@ public class BuyProductsController
         AddToCart.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
         if(!AddToCart.isDisable())
         {
-            Stage AddToCart= new Stage();
-            Parent addtocart = FXMLLoader.load(getClass().getClassLoader().getResource("AddToCart.fxml"));
-            AddToCart.setTitle("Add to cart");
-            AddToCart.setScene(new Scene(addtocart, 350, 400));
-            AddToCart.show();
-            cancelBuyProducts();
+            FXMLLoader loader=new FXMLLoader();
+            loader.setLocation(getClass().getClassLoader().getResource("AddToCart.fxml"));
+            Parent parent = loader.load();
+            Scene scene = new Scene(parent);
+            AddToCartController controller = loader.getController();
+            controller.set(list.getSelectionModel().getSelectedItem());
+            Stage stage = (Stage) (AddToCart.getScene().getWindow());
+            stage.setTitle("Add to cart");
+            stage.setScene(scene);
+            stage.show();
         }
         else
         {
