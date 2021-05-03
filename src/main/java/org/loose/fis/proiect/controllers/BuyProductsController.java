@@ -55,7 +55,7 @@ public class BuyProductsController
 
     public void handleAddToCartAction() throws Exception
     {
-
+        
     }
 
     public void handleShoppingCartAction() throws Exception
