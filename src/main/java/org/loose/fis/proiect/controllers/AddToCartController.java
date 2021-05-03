@@ -38,6 +38,9 @@ public class AddToCartController
     private static ObjectRepository<Product> productRepository;
     private static Nitrite database;
 
+    private static ObjectRepository<Product> shoppingRepository;
+    private static Nitrite shopping;
+
     public static void initDatabase()
     {
 
@@ -46,6 +49,17 @@ public class AddToCartController
                 .openOrCreate("test", "test");
 
         productRepository = database.getRepository(Product.class);
+
+    }
+
+    public static void initShopping()
+    {
+
+        shopping = Nitrite.builder()
+                .filePath(getPathToFile("shoppingcart.db").toFile())
+                .openOrCreate("test", "test");
+
+        shoppingRepository = shopping.getRepository(Product.class);
 
     }
 
@@ -66,6 +80,7 @@ public class AddToCartController
     public void handleAddToShoppingCartAction() throws Exception
     {
         initDatabase();
+        initShopping();
         if(stockfield.getText().trim().isEmpty())
         {
             AddToShoppingCartMessage.setText("Complete the stockfield!");
@@ -83,6 +98,13 @@ public class AddToCartController
                     else
                     {
                         p.setStock(String.valueOf(Integer.parseInt(p.getStock())-Integer.parseInt(stockfield.getText())));
+                        Product p1=new Product();
+                        p1.setName(p.getName());
+                        p1.setPrice(p.getPrice());
+                        p1.setStock(stockfield.getText());
+                        p1.setCategory(p.getCategory());
+                        p1.setCompany(p.getCompany());
+                        shoppingRepository.insert(p1);
                         productRepository.update(p);
                         if(Integer.parseInt(p.getStock())==0)
                         {
@@ -94,6 +116,7 @@ public class AddToCartController
             }
 
         }
+        shopping.close();
         database.close();
     }
     public void set(String s)
@@ -137,26 +160,6 @@ public class AddToCartController
             p=p+ s.charAt(x);
         pricefield.setText(p);
         pricefield.setDisable(true);
-
-        /*p = "";
-        k=0;l=0;j = 0;t=0;
-        for(i=0;i<s.length()-9;i++)
-        {
-            if (s.charAt(i) == ':' && s.charAt(i + 1) == ' ')
-            {
-                t++;
-            }
-            if(t==2)
-            {
-                k=i+2;
-            }
-            if (s.charAt(i) == ' ' && s.charAt(i+9)=='C' && s.charAt(i+10)=='a')
-                j = i - 1;
-
-        }
-        for(x=k+1;x<=j;x++)
-            p=p+ s.charAt(x);
-        stockfield.setText(p);*/
 
         p = "";
         k=0;l=0;j = 0;t=0;

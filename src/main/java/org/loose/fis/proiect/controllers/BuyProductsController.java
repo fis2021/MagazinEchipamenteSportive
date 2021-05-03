@@ -13,6 +13,7 @@ import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.proiect.model.Product;
 
 import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
+import static org.loose.fis.proiect.controllers.AddToCartController.*;
 
 public class BuyProductsController
 {
@@ -78,7 +79,16 @@ public class BuyProductsController
 
     public void handleShoppingCartAction() throws Exception
     {
-
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("ShoppingCart.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        ShoppingCartController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (AddToCart.getScene().getWindow());
+        stage.setTitle("Shopping cart");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void set()
