@@ -6,10 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.proiect.model.Product;
+
+import java.util.Objects;
 
 import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 
@@ -23,6 +26,8 @@ public class ShoppingCartController
     private Button RemoveProduct;
     @FXML
     private Button FinishCommand;
+    @FXML
+    private Text ShoppingCartMessage;
 
     private static ObjectRepository<Product> productRepository;
 
@@ -70,6 +75,157 @@ public class ShoppingCartController
 
     public void handleRemoveProductAction() throws Exception
     {
+        initDatabase();
+        initShopping();
+        RemoveProduct.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
+        if(!RemoveProduct.isDisable())
+        {
+
+            String namefield="";
+            String pricefield="";
+            String stockfield="";
+            String categoryfield="";
+            String companyfield="";
+            String s=list.getSelectionModel().getSelectedItem();
+
+            String p = "";
+            int i,k=0,l=0,j = 0,t=0;
+            for(i=0;i<s.length()-9;i++)
+            {
+                if (s.charAt(i) == ':' && s.charAt(i + 1) == ' ' && t==0)
+                {
+                    k = i + 2;
+                    t++;
+                }
+                if (s.charAt(i) == ' ' && s.charAt(i+9)=='P')
+                    j = i - 1;
+
+            }
+            int x;
+            for(x=k;x<=j;x++)
+                p=p+ s.charAt(x);
+            namefield=p;
+
+            p = "";
+            k=0;l=0;j = 0;t=0;
+            for(i=0;i<s.length()-9;i++)
+            {
+                if (s.charAt(i) == ':' && s.charAt(i + 1) == ' ')
+                {
+                    t++;
+                }
+                if(t==1)
+                {
+                    k=i+2;
+                }
+                if (s.charAt(i) == ' ' && s.charAt(i+9)=='S')
+                    j = i - 1;
+
+            }
+            for(x=k+1;x<=j;x++)
+                p=p+ s.charAt(x);
+            pricefield=p;
+
+            p = "";
+            k=0;l=0;j = 0;t=0;
+            for(i=0;i<s.length()-9;i++)
+            {
+                if (s.charAt(i) == ':' && s.charAt(i + 1) == ' ')
+                {
+                    t++;
+                }
+                if(t==2)
+                {
+                    k=i+2;
+                }
+                if (s.charAt(i) == ' ' && s.charAt(i+9)=='C' && s.charAt(i+10)=='a')
+                    j = i - 1;
+
+            }
+            for(x=k+1;x<=j;x++)
+                p=p+ s.charAt(x);
+            stockfield=p;
+
+            p = "";
+            k=0;l=0;j = 0;t=0;
+            for(i=0;i<s.length()-9;i++)
+            {
+                if (s.charAt(i) == ':' && s.charAt(i + 1) == ' ')
+                {
+                    t++;
+                }
+                if(t==3)
+                {
+                    k=i+2;
+                }
+                if (s.charAt(i) == ' ' && s.charAt(i+9)=='C' && s.charAt(i+10)=='o')
+                    j = i - 1;
+
+            }
+            for(x=k+1;x<=j;x++)
+                p=p+ s.charAt(x);
+            categoryfield=p;
+
+            p = "";
+            k=0;l=0;j = 0;t=0;
+            for(i=0;i<s.length()-1;i++)
+            {
+                if (s.charAt(i) == ':' && s.charAt(i + 1) == ' ')
+                {
+                    t++;
+                }
+                if(t==4)
+                {
+                    k=i+2;
+                }
+
+            }
+            for(x=k+1;x<s.length();x++)
+                p=p+ s.charAt(x);
+            companyfield=p;
+
+            int o=0;
+            for(Product product : productRepository.find())
+            {
+                if(Objects.equals(namefield,product.getName()))
+                {
+                    product.setStock(String.valueOf(Integer.parseInt(product.getStock())+Integer.parseInt(stockfield)));
+                    productRepository.update(product);
+                    shoppingRepository.remove(product);
+                    o=1;
+                }
+
+            }
+            if(o==0)
+            {
+                productRepository.insert(new Product(namefield,pricefield,stockfield,categoryfield,companyfield));
+                for(Product product : shoppingRepository.find())
+                {
+                    if(Objects.equals(namefield,product.getName()))
+                    {
+                        shoppingRepository.remove(product);
+                    }
+                }
+
+            }
+        }
+        else
+        {
+            ShoppingCartMessage.setText("Select an item!");
+        }
+
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("ShoppingCart.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        ShoppingCartController controller = loader.getController();
+        database.close();
+        shopping.close();
+        controller.set();
+        Stage stage = (Stage) (RemoveProduct.getScene().getWindow());
+        stage.setTitle("Shopping cart");
+        stage.setScene(scene);
+        stage.show();
 
     }
 
