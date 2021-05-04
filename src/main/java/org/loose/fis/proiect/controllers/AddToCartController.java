@@ -104,7 +104,21 @@ public class AddToCartController
                         p1.setStock(stockfield.getText());
                         p1.setCategory(p.getCategory());
                         p1.setCompany(p.getCompany());
-                        shoppingRepository.insert(p1);
+                        int k=0;
+                        for(Product product:shoppingRepository.find())
+                        {
+                            if(Objects.equals(product.getName(),p1.getName()))
+                            {
+                                product.setStock(String.valueOf(Integer.parseInt(p1.getStock())+Integer.parseInt(product.getStock())));
+                                shoppingRepository.update(product);
+                                k=1;
+                            }
+                        }
+                        if(k==0)
+                        {
+                            shoppingRepository.insert(p1);
+                        }
+
                         productRepository.update(p);
                         if(Integer.parseInt(p.getStock())==0)
                         {
@@ -114,6 +128,7 @@ public class AddToCartController
                     }
                 }
             }
+
 
         }
         shopping.close();

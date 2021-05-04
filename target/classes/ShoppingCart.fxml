@@ -29,7 +29,7 @@
                 <Insets left="200.0" />
             </GridPane.margin>
         </Button>
-        <Text fx:id="AddToCartMessage" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Text fx:id="ShoppingCartMessage" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
         <Button fx:id="FinishCommand" mnemonicParsing="false" onAction="#handleFinishCommandAction" text="Finish command" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
             <GridPane.margin>
                 <Insets right="35.0" />
