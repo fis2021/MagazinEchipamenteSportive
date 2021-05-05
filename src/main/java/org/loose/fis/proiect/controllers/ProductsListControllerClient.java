@@ -20,6 +20,8 @@ public class ProductsListControllerClient
     @FXML
     private Button BackButton;
 
+    private String username;
+
 
     private static ObjectRepository<Product> productRepository;
     private static Nitrite database;
@@ -39,7 +41,7 @@ public class ProductsListControllerClient
 
 
 
-    public void set()
+    public void set(String username)
     {
         initDatabase();
         for(Product p : productRepository.find())
@@ -48,6 +50,7 @@ public class ProductsListControllerClient
 
         }
         database.close();
+        this.username=username;
     }
 
 
@@ -75,7 +78,7 @@ public class ProductsListControllerClient
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         BuyProductsController controller = loader.getController();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (BackButton.getScene().getWindow());
         stage.setTitle("Buy Products");
         stage.setScene(scene);

@@ -22,6 +22,8 @@ public class ClientPageController
     @FXML
     private Button logoutbutton;
 
+    private String username;
+
     public void handleBuyProductsAction() throws Exception
     {
         cancelClientPage();
@@ -30,7 +32,7 @@ public class ClientPageController
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         BuyProductsController controller = loader.getController();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (buyproductsbutton.getScene().getWindow());
         stage.setTitle("Buy Products");
         stage.setScene(scene);
@@ -62,13 +64,17 @@ public class ClientPageController
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         ProductsListControllerClient controller = loader.getController();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (seeproductslistbutton.getScene().getWindow());
         stage.setTitle("Products List");
         stage.setScene(scene);
         stage.show();
 
 
+    }
+    public void set(String username)
+    {
+        this.username=username;
     }
 
     public void handleLogoutClientAction() throws Exception

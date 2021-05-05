@@ -28,6 +28,8 @@ public class BuyProductsController
     @FXML
     private Text AddToCartMessage;
 
+    private String username;
+
     private static ObjectRepository<Product> productRepository;
 
     private static Nitrite database;
@@ -64,7 +66,7 @@ public class BuyProductsController
             Parent parent = loader.load();
             Scene scene = new Scene(parent);
             AddToCartController controller = loader.getController();
-            controller.set(list.getSelectionModel().getSelectedItem());
+            controller.set(list.getSelectionModel().getSelectedItem(),username);
             Stage stage = (Stage) (AddToCart.getScene().getWindow());
             stage.setTitle("Add to cart");
             stage.setScene(scene);
@@ -84,14 +86,14 @@ public class BuyProductsController
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         ShoppingCartController controller = loader.getController();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (AddToCart.getScene().getWindow());
         stage.setTitle("Shopping cart");
         stage.setScene(scene);
         stage.show();
     }
 
-    public void set()
+    public void set(String username)
     {
         initDatabase();
         for(Product p : productRepository.find())
@@ -99,6 +101,7 @@ public class BuyProductsController
             list.getItems().add("Name: "+ p.getName() + "         Price: "  + p.getPrice() +"         Stock: " + p.getStock() + "         Category: " + p.getCategory() +"         Company: "+ p.getCompany());
 
         }
+        this.username=username;
         database.close();
     }
 

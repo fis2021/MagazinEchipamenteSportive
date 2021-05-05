@@ -7,16 +7,17 @@ import java.util.Objects;
 
 public class Order
 {
-    @Id
     private String username;
 
     private ArrayList <Product> order = new ArrayList <Product>();
-
     public Order(String username, ArrayList<Product> order)
     {
         this.username = username;
         this.order = order;
     }
+    public Order() {
+    }
+
 
     public String getUsername()
     {
