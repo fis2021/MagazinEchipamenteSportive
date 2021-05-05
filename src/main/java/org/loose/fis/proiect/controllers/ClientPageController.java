@@ -38,9 +38,19 @@ public class ClientPageController
     }
 
 
-    public void handleSeeAllYourOrdersAction()
+    public void handleSeeAllYourOrdersAction() throws Exception
     {
-
+        cancelClientPage();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("SeeAllHisOrders.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        SeeAllHisOrdersController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (seeallyourordersbutton.getScene().getWindow());
+        stage.setTitle("See All Your Orders");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
