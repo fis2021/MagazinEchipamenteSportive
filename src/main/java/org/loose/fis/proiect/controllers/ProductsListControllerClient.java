@@ -20,7 +20,7 @@ public class ProductsListControllerClient
     @FXML
     private Button BackButton;
 
-    private String username;
+    private static String username;
 
 
     private static ObjectRepository<Product> productRepository;
