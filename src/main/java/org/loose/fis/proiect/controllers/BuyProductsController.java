@@ -28,7 +28,7 @@ public class BuyProductsController
     @FXML
     private Text AddToCartMessage;
 
-    private String username;
+    private static String username;
 
     private static ObjectRepository<Product> productRepository;
 

@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ShowOrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ShowOrder.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/AddToCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/AddToCartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/BuyProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/BuyProductsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ClientPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ClientPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ProductsListControllerClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ProductsListControllerClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ShoppingCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/ShoppingCartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/ShoppingCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/ShoppingCartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SeeAllHisOrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SeeAllHisOrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SeeAllHisOrders.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SeeAllHisOrders.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/ClientPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/ClientPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/SeeAllHisOrdersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/SeeAllHisOrdersController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

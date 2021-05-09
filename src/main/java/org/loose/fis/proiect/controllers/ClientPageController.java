@@ -6,9 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
+import org.dizitart.no2.Nitrite;
+import org.dizitart.no2.objects.ObjectRepository;
 import org.loose.fis.proiect.controllers.ProductsListController;
+import org.loose.fis.proiect.model.Order;
 
-
+import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 
 
 public class ClientPageController
@@ -22,7 +25,8 @@ public class ClientPageController
     @FXML
     private Button logoutbutton;
 
-    private String username;
+    private static String username;
+
 
     public void handleBuyProductsAction() throws Exception
     {
@@ -48,7 +52,7 @@ public class ClientPageController
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         SeeAllHisOrdersController controller = loader.getController();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (seeallyourordersbutton.getScene().getWindow());
         stage.setTitle("See All Your Orders");
         stage.setScene(scene);

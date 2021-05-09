@@ -32,6 +32,6 @@
                 <Insets left="300.0" />
             </GridPane.margin>
         </Button>
-        <Text fx:id="EditMessage" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Text fx:id="ShowOrderMessage" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
     </children>
 </GridPane>
