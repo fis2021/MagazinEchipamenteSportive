@@ -37,6 +37,8 @@ public class SignInController
     @FXML
     private Button signinbutton;
 
+    private String username;
+
     private static ObjectRepository<User> userRepository;
     private static Nitrite database;
 
@@ -74,12 +76,23 @@ public class SignInController
                         if(user.getRole().equals("Client"))
                         {
                             database.close();
-                            Stage Client= new Stage();
+                            username=usernameField.getText();
+                            /*Stage Client= new Stage();
                             Parent client = FXMLLoader.load(getClass().getClassLoader().getResource("ClientPage.fxml"));
                             Client.setTitle("ClientPage");
                             Client.setScene(new Scene(client, 350, 400));
                             Client.show();
-                            cancelSignIn();
+                            cancelSignIn();*/
+                            FXMLLoader loader=new FXMLLoader();
+                            loader.setLocation(getClass().getClassLoader().getResource("ClientPage.fxml"));
+                            Parent parent = loader.load();
+                            Scene scene = new Scene(parent);
+                            ClientPageController controller = loader.getController();
+                            controller.set(username);
+                            Stage stage = (Stage) (backbutton.getScene().getWindow());
+                            stage.setTitle("Client Page");
+                            stage.setScene(scene);
+                            stage.show();
                         }
                         if(user.getRole().equals("Manager"))
                         {
@@ -106,6 +119,10 @@ public class SignInController
                     }
             }
         }
+    }
+    public String getUsername()
+    {
+        return username;
     }
     public void cancelSignIn()
     {

@@ -41,6 +41,8 @@ public class AddToCartController
     private static ObjectRepository<Product> shoppingRepository;
     private static Nitrite shopping;
 
+    private String username;
+
     public static void initDatabase()
     {
 
@@ -70,7 +72,7 @@ public class AddToCartController
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         BuyProductsController controller = loader.getController();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (backbutton.getScene().getWindow());
         stage.setTitle("Buy Products");
         stage.setScene(scene);
@@ -134,9 +136,10 @@ public class AddToCartController
         shopping.close();
         database.close();
     }
-    public void set(String s)
+    public void set(String s,String username)
     {
         initDatabase();
+        this.username=username;
         String p = "";
         int i,k=0,l=0,j = 0,t=0;
         for(i=0;i<s.length()-9;i++)

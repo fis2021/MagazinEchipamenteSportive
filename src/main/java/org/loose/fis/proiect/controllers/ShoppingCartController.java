@@ -10,8 +10,12 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.proiect.model.Order;
 import org.loose.fis.proiect.model.Product;
+import org.loose.fis.proiect.model.User;
+import org.loose.fis.proiect.controllers.SignInController.*;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
@@ -29,6 +33,8 @@ public class ShoppingCartController
     @FXML
     private Text ShoppingCartMessage;
 
+    private String username;
+
     private static ObjectRepository<Product> productRepository;
 
     private static Nitrite database;
@@ -36,6 +42,20 @@ public class ShoppingCartController
     private static ObjectRepository<Product> shoppingRepository;
     private static Nitrite shopping;
 
+    private static ObjectRepository<Order> ordersRepository;
+    private static Nitrite orders;
+
+    private static ObjectRepository<User> userRepository;
+    private static Nitrite user;
+
+    public static void initUser()
+    {
+        user = Nitrite.builder()
+                .filePath(getPathToFile("registration-example.db").toFile())
+                .openOrCreate("test", "test");
+
+        userRepository = user.getRepository(User.class);
+    }
 
     public static void initDatabase()
     {
@@ -59,6 +79,17 @@ public class ShoppingCartController
 
     }
 
+    public static void initOrders()
+    {
+
+        orders = Nitrite.builder()
+                .filePath(getPathToFile("orders.db").toFile())
+                .openOrCreate("test", "test");
+
+        ordersRepository = orders.getRepository(Order.class);
+
+    }
+
     public void handleBackAction() throws Exception
     {
         FXMLLoader loader=new FXMLLoader();
@@ -66,7 +97,7 @@ public class ShoppingCartController
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         BuyProductsController controller = loader.getController();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (BackButton.getScene().getWindow());
         stage.setTitle("Buy Products");
         stage.setScene(scene);
@@ -78,9 +109,9 @@ public class ShoppingCartController
         initDatabase();
         initShopping();
         RemoveProduct.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
+        System.out.println(RemoveProduct.isDisable());
         if(!RemoveProduct.isDisable())
         {
-
             String namefield="";
             String pricefield="";
             String stockfield="";
@@ -208,20 +239,21 @@ public class ShoppingCartController
                 }
 
             }
+
         }
         else
         {
             ShoppingCartMessage.setText("Select an item!");
         }
+        database.close();
+        shopping.close();
 
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getClassLoader().getResource("ShoppingCart.fxml"));
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         ShoppingCartController controller = loader.getController();
-        database.close();
-        shopping.close();
-        controller.set();
+        controller.set(username);
         Stage stage = (Stage) (RemoveProduct.getScene().getWindow());
         stage.setTitle("Shopping cart");
         stage.setScene(scene);
@@ -229,15 +261,45 @@ public class ShoppingCartController
 
     }
 
+
     public void handleFinishCommandAction() throws Exception
     {
+        initOrders();
+        initShopping();
+        if(shoppingRepository.size()!=0) {
+            ArrayList<Product> order = new ArrayList<Product>();
+            for (Product p : shoppingRepository.find()) {
+                order.add(p);
+            }
+            Order ord = new Order(username, order);
+            ordersRepository.insert(ord);
 
+            for (Product p : shoppingRepository.find())
+                shoppingRepository.remove(p);
+            orders.close();
+            shopping.close();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getClassLoader().getResource("BuyProducts.fxml"));
+            Parent parent = loader.load();
+            Scene scene = new Scene(parent);
+            BuyProductsController controller = loader.getController();
+            controller.set(username);
+            Stage stage = (Stage) (BackButton.getScene().getWindow());
+            stage.setTitle("Buy Products");
+            stage.setScene(scene);
+            stage.show();
+        }
+        else
+        {
+            ShoppingCartMessage.setText("The list is empty!");
+        }
     }
+
     public void cancelShoppingCartPage()
     {
         BackButton.getScene().getWindow().hide();
     }
-    public void set()
+    public void set(String username)
     {
         initShopping();
         for(Product p : shoppingRepository.find())
@@ -245,5 +307,6 @@ public class ShoppingCartController
             list.getItems().add("Name: "+ p.getName() + "         Price: "  + p.getPrice() +"         Stock: " + p.getStock() + "         Category: " + p.getCategory() +"         Company: "+ p.getCompany());
         }
         shopping.close();
+        this.username=username;
     }
 }
