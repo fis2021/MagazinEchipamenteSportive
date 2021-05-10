@@ -72,6 +72,11 @@ public class Product
     }
 
     @Override
+    public String toString() {
+        return "Name: "+ name + "         Price: "  + price +"         Stock: " + stock + "         Category: " + category +"         Company: "+ company;
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(name, price, stock, category, company);
     }
