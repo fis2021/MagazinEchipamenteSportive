@@ -15,6 +15,7 @@ org\loose\fis\proiect\controllers\ManagerPageController.class
 org\loose\fis\proiect\controllers\SignInController.class
 org\loose\fis\proiect\model\Order.class
 org\loose\fis\proiect\controllers\EditButtonFromEditProductsController.class
+org\loose\fis\proiect\controllers\SeeClientDetailsController.class
 org\loose\fis\proiect\controllers\StartPageController.class
 org\loose\fis\proiect\services\ProductService.class
 org\loose\fis\proiect\controllers\EditProductsController.class
