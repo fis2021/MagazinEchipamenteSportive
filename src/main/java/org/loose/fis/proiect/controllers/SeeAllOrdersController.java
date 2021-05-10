@@ -46,7 +46,6 @@ public class SeeAllOrdersController
 
     public void handleBackAction () throws Exception
     {
-
         Stage Back= new Stage();
         Parent back = FXMLLoader.load(getClass().getClassLoader().getResource("ManagerPage.fxml"));
         Back.setTitle("Manager Page");
