@@ -7,6 +7,7 @@ C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\mai
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\StartPageController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\exceptions\UsernameAlreadyExistsException.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\EditProductsController.java
+C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\SeeClientDetailsController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\SignInController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\RegistrationController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\ClientPageController.java
@@ -22,5 +23,6 @@ C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\mai
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\BuyProductsController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\SeeAllOrdersController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\ShoppingCartController.java
+C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\ShowClientDetailsController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\AddToCartController.java
 C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect\controllers\ShowOrderController.java
