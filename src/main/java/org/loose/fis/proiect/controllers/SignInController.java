@@ -77,12 +77,6 @@ public class SignInController
                         {
                             database.close();
                             username=usernameField.getText();
-                            /*Stage Client= new Stage();
-                            Parent client = FXMLLoader.load(getClass().getClassLoader().getResource("ClientPage.fxml"));
-                            Client.setTitle("ClientPage");
-                            Client.setScene(new Scene(client, 350, 400));
-                            Client.show();
-                            cancelSignIn();*/
                             FXMLLoader loader=new FXMLLoader();
                             loader.setLocation(getClass().getClassLoader().getResource("ClientPage.fxml"));
                             Parent parent = loader.load();
