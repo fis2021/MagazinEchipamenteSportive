@@ -72,7 +72,7 @@ public class SeeAllHisOrdersController {
             Parent parent = loader.load();
             Scene scene = new Scene(parent);
             ShowOrderController controller = loader.getController();
-            controller.set(username);
+            controller.set(list.getSelectionModel().getSelectedItem(),username);
             Stage stage = (Stage) (ShowOrder.getScene().getWindow());
             stage.setTitle("Show Order");
             stage.setScene(scene);
