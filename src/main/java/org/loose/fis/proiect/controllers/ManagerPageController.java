@@ -96,9 +96,19 @@ public class ManagerPageController
     }
 
 
-    public void handleSeeAllOrdersAction()
+    public void handleSeeAllOrdersAction() throws Exception
     {
-
+        cancelManagerPage();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("SeeAllOrders.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        SeeAllOrdersController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (seeallordersbutton.getScene().getWindow());
+        stage.setTitle("Show All orders");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
