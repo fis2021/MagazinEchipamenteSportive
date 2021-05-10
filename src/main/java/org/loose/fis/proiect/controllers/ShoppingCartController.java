@@ -109,7 +109,6 @@ public class ShoppingCartController
         initDatabase();
         initShopping();
         RemoveProduct.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
-        System.out.println(RemoveProduct.isDisable());
         if(!RemoveProduct.isDisable())
         {
             String namefield="";

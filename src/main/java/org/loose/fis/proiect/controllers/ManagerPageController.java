@@ -112,9 +112,19 @@ public class ManagerPageController
     }
 
 
-    public void handleClientDetailsAction()
+    public void handleClientDetailsAction() throws Exception
     {
-
+        cancelManagerPage();
+        FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(getClass().getClassLoader().getResource("SeeClientDetails.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        SeeClientDetailsController controller = loader.getController();
+        controller.set();
+        Stage stage = (Stage) (clientdetailsbutton.getScene().getWindow());
+        stage.setTitle("See Clients Details");
+        stage.setScene(scene);
+        stage.show();
     }
 
 
