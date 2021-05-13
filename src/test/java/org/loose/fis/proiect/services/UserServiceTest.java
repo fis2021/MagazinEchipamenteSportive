@@ -17,7 +17,7 @@ class UserServiceTest
 
     @Test
     @DisplayName("Database is initialized and there are no users")
-    void testProductDatabaseIsInitializedAndNoUserIsPersisted()
+    void testUserDatabaseIsInitializedAndNoUserIsPersisted()
     {
         assertThat(UserService.getAllUsers()).isNotNull();
         assertThat(UserService.getAllUsers()).isEmpty();

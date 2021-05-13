@@ -20,6 +20,7 @@ public class ProductService {
 
     public static void initDatabase()
     {
+        FileSystemService.initDirectory();
         database = Nitrite.builder()
                 .filePath(getPathToFile("products.db").toFile())
                 .openOrCreate("test", "test");
@@ -51,5 +52,15 @@ public class ProductService {
     public static void CloseDatabase()
     {
         database.close();
+    }
+
+    public static Nitrite getDatabase()
+    {
+        return database;
+    }
+
+    public static List<Product> getAllProducts()
+    {
+        return productRepository.find().toList();
     }
 }
