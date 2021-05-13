@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/services/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/StartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/services/FileSystemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/services/FileSystemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/StartPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/StartPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/services/FileSystemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/services/FileSystemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/services/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +28,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -44,6 +53,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -54,43 +66,107 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\natha\OneDrive\Documente\Proiect FIS\MagazinEchipamenteSportive\src\main\java\org\loose\fis\proiect" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.loose.fis.proiect.services" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.registration.example.Main" />
+  <component name="RunManager" selected="JUnit.UserServiceTest">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.loose.fis.registration.example.*" />
+          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-15.0.2" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.Main" />
+    <configuration name="UserServiceTest.testCheckUserDoesNotAlreadyExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.loose.fis.registration.example.*" />
+          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="testCheckUserDoesNotAlreadyExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testDatabaseIsClosed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="testDatabaseIsClosed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testEncodePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="testEncodePassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testProductDatabaseIsInitializedAndNoUserIsPersisted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
+      <option name="METHOD_NAME" value="testProductDatabaseIsInitializedAndNoUserIsPersisted" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.UserServiceTest.testProductDatabaseIsInitializedAndNoUserIsPersisted" />
+      <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="JUnit.UserServiceTest.testCheckUserDoesNotAlreadyExists" />
+      <item itemvalue="JUnit.UserServiceTest.testEncodePassword" />
+      <item itemvalue="JUnit.UserServiceTest.testDatabaseIsClosed" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.testDatabaseIsClosed" />
+        <item itemvalue="JUnit.UserServiceTest.testEncodePassword" />
+        <item itemvalue="JUnit.UserServiceTest.testCheckUserDoesNotAlreadyExists" />
+        <item itemvalue="JUnit.UserServiceTest.testProductDatabaseIsInitializedAndNoUserIsPersisted" />
       </list>
     </recent_temporary>
   </component>
