@@ -9,6 +9,7 @@ import org.loose.fis.proiect.model.User;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
 

@@ -8,6 +8,7 @@ import org.loose.fis.proiect.model.User;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 import java.util.Objects;
 
 import static org.loose.fis.proiect.services.FileSystemService.getPathToFile;
@@ -18,6 +19,7 @@ public class UserService {
     private static Nitrite database;
 
     public static void initDatabase() {
+        FileSystemService.initDirectory();
         database = Nitrite.builder()
                 .filePath(getPathToFile("registration-example.db").toFile())
                 .openOrCreate("test", "test");
@@ -30,7 +32,7 @@ public class UserService {
         userRepository.insert(new User(username, encodePassword(username, password), role,firstname,lastname,email));
     }
 
-    private static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
+    public static void checkUserDoesNotAlreadyExist(String username) throws UsernameAlreadyExistsException {
         for (User user : userRepository.find()) {
             if (Objects.equals(username, user.getUsername()))
                 throw new UsernameAlreadyExistsException(username);
@@ -40,8 +42,12 @@ public class UserService {
     {
         database.close();
     }
+    public static Nitrite getDatabase()
+    {
+        return database;
+    }
 
-    private static String encodePassword(String salt, String password) {
+    public static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
         md.update(salt.getBytes(StandardCharsets.UTF_8));
 
@@ -60,6 +66,11 @@ public class UserService {
             throw new IllegalStateException("SHA-512 does not exist!");
         }
         return md;
+    }
+
+    public static List<User> getAllUsers()
+    {
+        return userRepository.find().toList();
     }
 
 
