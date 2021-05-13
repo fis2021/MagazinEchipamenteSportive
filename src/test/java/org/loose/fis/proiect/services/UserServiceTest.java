@@ -21,6 +21,7 @@ class UserServiceTest
     {
         assertThat(UserService.getAllUsers()).isNotNull();
         assertThat(UserService.getAllUsers()).isEmpty();
+
     }
 
     @Test
@@ -73,6 +74,7 @@ class UserServiceTest
     {
         UserService.CloseDatabase();
         assertThat(UserService.getDatabase().isClosed()).isEqualTo(true);
+        UserService.initDatabase();
     }
 
     @BeforeEach
@@ -81,6 +83,7 @@ class UserServiceTest
         FileSystemService.APPLICATION_FOLDER=".test-registration-example";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
         UserService.initDatabase();
+
     }
 
     @AfterEach
