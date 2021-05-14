@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.testfx.assertions.api.Assertions.assertThat;
 
 @ExtendWith(ApplicationExtension.class)
-class RegistrationTest
+class ZRegistrationTest
 {
     @AfterEach
     void tearDown() {
