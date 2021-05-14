@@ -50,17 +50,6 @@ public class DeleteProductsController
         Delete.disableProperty().bind(list.getSelectionModel().selectedItemProperty().isNull());
         if(!Delete.isDisable())
         {
-            /*FXMLLoader loader=new FXMLLoader();
-            loader.setLocation(getClass().getClassLoader().getResource("DeleteProducts.fxml"));
-            Parent parent = loader.load();
-            Scene scene = new Scene(parent);
-            EditButtonFromEditProductsController controller = loader.getController();
-            controller.set(list.getSelectionModel().getSelectedItem());
-            Stage stage = (Stage) (BackButton.getScene().getWindow());
-            stage.setTitle("Delete the product");
-            stage.setScene(scene);
-            stage.show();
-            database.close();*/
             initDatabase();
             String s=  list.getSelectionModel().getSelectedItem() ;
             String p = "";
