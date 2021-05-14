@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SeeClientDetailsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/ManagerProductsListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +65,8 @@
       <recent name="org.loose.fis.proiect.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SeeClientDetailsTest.testseeclientdetails">
-    <configuration name="DeleteProductsTest.testaddproducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ManagerProductsListTest.testseeproductslistmanager">
+    <configuration name="ManagerProductsListTest.testseeproductslistmanager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
         <pattern>
@@ -76,8 +75,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.DeleteProductsTest" />
-      <option name="METHOD_NAME" value="testaddproducts(org.testfx.api.FxRobot)" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.ManagerProductsListTest" />
+      <option name="METHOD_NAME" value="testseeproductslistmanager(org.testfx.api.FxRobot)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,19 +147,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.DeleteProductsTest.testaddproducts" />
       <item itemvalue="JUnit.SeeAllOrdersTest.testaddproducts" />
       <item itemvalue="JUnit.SeeAllOrdersTest.testseeallorders" />
       <item itemvalue="JUnit.SeeAllHisOrdersTest.testseeallhisorders" />
       <item itemvalue="JUnit.SeeClientDetailsTest.testseeclientdetails" />
+      <item itemvalue="JUnit.ManagerProductsListTest.testseeproductslistmanager" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ManagerProductsListTest.testseeproductslistmanager" />
         <item itemvalue="JUnit.SeeClientDetailsTest.testseeclientdetails" />
         <item itemvalue="JUnit.SeeAllHisOrdersTest.testseeallhisorders" />
         <item itemvalue="JUnit.SeeAllOrdersTest.testseeallorders" />
         <item itemvalue="JUnit.SeeAllOrdersTest.testaddproducts" />
-        <item itemvalue="JUnit.DeleteProductsTest.testaddproducts" />
       </list>
     </recent_temporary>
   </component>
