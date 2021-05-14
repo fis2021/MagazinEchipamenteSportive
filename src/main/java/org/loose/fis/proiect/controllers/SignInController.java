@@ -10,6 +10,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.dizitart.no2.Nitrite;
 import org.dizitart.no2.objects.ObjectRepository;
+import org.loose.fis.proiect.services.FileSystemService;
 import org.loose.fis.proiect.services.UserService;
 import org.loose.fis.proiect.model.User;
 import javafx.scene.control.*;
@@ -44,6 +45,7 @@ public class SignInController
 
     public static void initDatabase()
     {
+        FileSystemService.initDirectory();
         database = Nitrite.builder()
                 .filePath(getPathToFile("registration-example.db").toFile())
                 .openOrCreate("test", "test");
@@ -71,6 +73,7 @@ public class SignInController
             {
                 if (Objects.equals(usernameField.getText(),user.getUsername()))
                 {
+
                     if (Objects.equals(encodePassword(usernameField.getText(),passwordField.getText()),user.getPassword()))
                     {
                         if(user.getRole().equals("Client"))
@@ -113,6 +116,7 @@ public class SignInController
                     }
             }
         }
+
     }
     public String getUsername()
     {
