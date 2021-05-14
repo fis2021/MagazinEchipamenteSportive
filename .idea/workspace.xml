@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/RegistrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SignInTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/services/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SignIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SignIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SignIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SignIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/SignInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/loose/fis/proiect/controllers/SignInController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,22 +73,7 @@
       <recent name="org.loose.fis.proiect.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.testEncodePassword">
-    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MagazinEchipamenteSportive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.ProductServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SignInTest.testsignin (1)">
     <configuration name="RegistrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
@@ -99,67 +89,83 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.testregister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
+          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTest.testDatabaseIsClosed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MagazinEchipamenteSportive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="testDatabaseIsClosed" />
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.RegistrationTest" />
+      <option name="METHOD_NAME" value="testregister(org.testfx.api.FxRobot)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest.testEncodePassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SignInTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.services.*" />
+          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.services" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.services.UserServiceTest" />
-      <option name="METHOD_NAME" value="testEncodePassword" />
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SignInTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignInTest.testsignin (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SignInTest" />
+      <option name="METHOD_NAME" value="testsignin(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignInTest.testsignin (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SignInTest" />
+      <option name="METHOD_NAME" value="testsignin(org.testfx.api.FxRobot,org.testfx.api.FxRobot)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProductServiceTest" />
+      <item itemvalue="JUnit.SignInTest.testsignin (1)" />
+      <item itemvalue="JUnit.RegistrationTest.testregister" />
       <item itemvalue="JUnit.RegistrationTest" />
-      <item itemvalue="JUnit.UserServiceTest.testDatabaseIsClosed" />
-      <item itemvalue="JUnit.UserServiceTest" />
-      <item itemvalue="JUnit.UserServiceTest.testEncodePassword" />
+      <item itemvalue="JUnit.SignInTest" />
+      <item itemvalue="JUnit.SignInTest.testsignin (2)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserServiceTest.testEncodePassword" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserServiceTest.testDatabaseIsClosed" />
+        <item itemvalue="JUnit.SignInTest.testsignin (1)" />
+        <item itemvalue="JUnit.SignInTest.testsignin (2)" />
+        <item itemvalue="JUnit.RegistrationTest.testregister" />
         <item itemvalue="JUnit.RegistrationTest" />
-        <item itemvalue="JUnit.ProductServiceTest" />
+        <item itemvalue="JUnit.SignInTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,5 +191,19 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SignInTest.java</url>
+          <line>54</line>
+          <properties class="org.loose.fis.proiect.controllers.SignInTest" method="testsignin">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

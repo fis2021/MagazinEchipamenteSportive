@@ -10,6 +10,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.loose.fis.proiect.model.User;
 import org.loose.fis.proiect.services.FileSystemService;
 import org.loose.fis.proiect.services.UserService;
 import org.testfx.api.FxRobot;
@@ -20,13 +21,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.testfx.assertions.api.Assertions.assertThat;
 
 @ExtendWith(ApplicationExtension.class)
-class RegistrationTest
+class SignInTest
 {
-    @AfterEach
-    void tearDown() {
-        UserService.CloseDatabase();
-    }
-
     public static final String USER_1 = "user1";
 
     @BeforeEach
@@ -34,22 +30,31 @@ class RegistrationTest
     {
         FileSystemService.APPLICATION_FOLDER=".test-registration-example";
         FileUtils.cleanDirectory(FileSystemService.getApplicationHomeFolder().toFile());
-        UserService.initDatabase();
+        //UserService.initDatabase();
+    }
+
+    @AfterEach
+    void tearDown() {
+        //UserService.CloseDatabase();
     }
 
     @Start
-     void start(Stage Registration) throws Exception
+    void start(Stage Registration) throws Exception
     {
+        /*Parent signin = FXMLLoader.load(getClass().getClassLoader().getResource("SignIn.fxml"));
+        SignIn.setTitle("Sign In");
+        SignIn.setScene(new Scene(signin, 350, 400));
+        SignIn.show();*/
         Parent registration = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
         Registration.setTitle("Registration");
-        Registration.setScene(new Scene(registration, 350, 400));
+        Registration.setScene(new Scene(registration, 350, 450));
         Registration.show();
     }
 
-
     @Test
-    void testregister(FxRobot robot)
+    void testsignin(FxRobot robot)
     {
+        UserService.initDatabase();
         robot.clickOn("#firstname");
         robot.write(USER_1);
         robot.clickOn("#lastname");
@@ -65,29 +70,16 @@ class RegistrationTest
         robot.write(USER_1);
 
         robot.clickOn("#registerbutton");
-        robot.clickOn("#backbutton");
-        robot.clickOn("#registrationbutton");
+        UserService.CloseDatabase();
 
-        robot.clickOn("#firstname");
-        robot.write(USER_1);
-        robot.clickOn("#lastname");
-        robot.write(USER_1);
         robot.clickOn("#username");
         robot.write(USER_1);
         robot.clickOn("#password");
         robot.write(USER_1);
-        robot.clickOn("#role");
-        //robot.type(KeyCode.DOWN);
-        robot.type(KeyCode.ENTER);
-        robot.clickOn("#email");
-        robot.write(USER_1);
 
+        robot.clickOn("#signinbutton");
 
-        robot.clickOn("#registerbutton");
-        assertThat(robot.lookup("#registrationmessage").queryText()).hasText(String.format("An account with the username %s already exists!",USER_1));
-
-
-
+        assertThat(robot.window("Client Page")).isShowing();
+        //assertThat(robot.window("Manager Page")).isShowing();
     }
-
 }
