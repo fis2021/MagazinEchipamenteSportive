@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/DeleteProductsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SeeAllOrdersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/DeleteProductsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/loose/fis/proiect/controllers/DeleteProductsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SignInTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/DeleteProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/DeleteProductsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,38 +67,7 @@
       <recent name="org.loose.fis.proiect.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DeleteProductsTest.testaddproducts">
-    <configuration name="AddProductsTest.testaddproducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MagazinEchipamenteSportive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.AddProductsTest" />
-      <option name="METHOD_NAME" value="testaddproducts(org.testfx.api.FxRobot)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BuyProductsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MagazinEchipamenteSportive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.BuyProductsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SeeAllOrdersTest.testseeallorders">
     <configuration name="DeleteProductsTest.testaddproducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
@@ -133,6 +100,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SeeAllOrdersTest.testaddproducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SeeAllOrdersTest" />
+      <option name="METHOD_NAME" value="testaddproducts(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeeAllOrdersTest.testseeallorders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SeeAllOrdersTest" />
+      <option name="METHOD_NAME" value="testseeallorders(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SignInTest.testsignin (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
@@ -151,18 +150,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.SignInTest.testsignin (1)" />
-      <item itemvalue="JUnit.BuyProductsTest" />
-      <item itemvalue="JUnit.AddProductsTest.testaddproducts" />
       <item itemvalue="JUnit.EditProductsTest.testeditproducts" />
       <item itemvalue="JUnit.DeleteProductsTest.testaddproducts" />
+      <item itemvalue="JUnit.SeeAllOrdersTest.testaddproducts" />
+      <item itemvalue="JUnit.SeeAllOrdersTest.testseeallorders" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SeeAllOrdersTest.testseeallorders" />
+        <item itemvalue="JUnit.SeeAllOrdersTest.testaddproducts" />
         <item itemvalue="JUnit.DeleteProductsTest.testaddproducts" />
         <item itemvalue="JUnit.SignInTest.testsignin (1)" />
         <item itemvalue="JUnit.EditProductsTest.testeditproducts" />
-        <item itemvalue="JUnit.AddProductsTest.testaddproducts" />
-        <item itemvalue="JUnit.BuyProductsTest" />
       </list>
     </recent_temporary>
   </component>
