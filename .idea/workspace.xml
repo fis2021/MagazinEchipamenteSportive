@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SeeAllHisOrdersTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/SeeClientDetailsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/controllers/ZRegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <recent name="org.loose.fis.proiect.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SeeAllHisOrdersTest.testseeallhisorders">
+  <component name="RunManager" selected="JUnit.SeeClientDetailsTest.testseeclientdetails">
     <configuration name="DeleteProductsTest.testaddproducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
@@ -133,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignInTest.testsignin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SeeClientDetailsTest.testseeclientdetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
         <pattern>
@@ -142,27 +140,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SignInTest" />
-      <option name="METHOD_NAME" value="testsignin(org.testfx.api.FxRobot)" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SeeClientDetailsTest" />
+      <option name="METHOD_NAME" value="testseeclientdetails(org.testfx.api.FxRobot)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SignInTest.testsignin (1)" />
       <item itemvalue="JUnit.DeleteProductsTest.testaddproducts" />
       <item itemvalue="JUnit.SeeAllOrdersTest.testaddproducts" />
       <item itemvalue="JUnit.SeeAllOrdersTest.testseeallorders" />
       <item itemvalue="JUnit.SeeAllHisOrdersTest.testseeallhisorders" />
+      <item itemvalue="JUnit.SeeClientDetailsTest.testseeclientdetails" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SeeClientDetailsTest.testseeclientdetails" />
         <item itemvalue="JUnit.SeeAllHisOrdersTest.testseeallhisorders" />
         <item itemvalue="JUnit.SeeAllOrdersTest.testseeallorders" />
         <item itemvalue="JUnit.SeeAllOrdersTest.testaddproducts" />
         <item itemvalue="JUnit.DeleteProductsTest.testaddproducts" />
-        <item itemvalue="JUnit.SignInTest.testsignin (1)" />
       </list>
     </recent_temporary>
   </component>
