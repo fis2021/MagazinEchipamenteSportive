@@ -20,12 +20,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.testfx.assertions.api.Assertions.assertThat;
 
 @ExtendWith(ApplicationExtension.class)
-class DeleteProductsTest {
-    public static final String USER_1 = "user1";
+class SeeAllOrdersTest {
+
+    private static final String USER_1 = "user1";
+    private static final String USER_2 = "user2";
     public static final String PRODUCT_1 = "product1";
     public static final String Priceandstock = "10";
-    public static final String PRODUCT_2 = "product2";
-    public static final String Priceandstock2 = "5";
 
     @BeforeEach
     void setUp() throws Exception {
@@ -42,7 +42,7 @@ class DeleteProductsTest {
     }
 
     @Test
-    void testdeleteproducts(FxRobot robot) {
+    void testseeallorders(FxRobot robot) {
         UserService.initDatabase();
         robot.clickOn("#firstname");
         robot.write(USER_1);
@@ -53,13 +53,13 @@ class DeleteProductsTest {
         robot.clickOn("#password");
         robot.write(USER_1);
         robot.clickOn("#role");
-        robot.type(KeyCode.DOWN);
+        //robot.type(KeyCode.DOWN);
         robot.type(KeyCode.ENTER);
         robot.clickOn("#email");
         robot.write(USER_1);
 
         robot.clickOn("#registerbutton");
-        UserService.CloseDatabase();
+        //UserService.CloseDatabase();
 
         robot.clickOn("#username");
         robot.write(USER_1);
@@ -69,18 +69,54 @@ class DeleteProductsTest {
         robot.clickOn("#signinbutton");
 
         ProductService.addProduct(PRODUCT_1,Priceandstock,Priceandstock,PRODUCT_1,PRODUCT_1);
-        ProductService.addProduct(PRODUCT_2,Priceandstock2,Priceandstock2,PRODUCT_2,PRODUCT_2);
-        robot.clickOn("#deleteproductsbutton");
-        assertThat(robot.window("Delete Products")).isShowing();
-
-        robot.clickOn("#Delete");
-        assertThat(robot.lookup("#DeleteMessage").queryText()).hasText("Select an item!");
+        robot.clickOn("#buyproductsbutton");
 
         robot.type(KeyCode.UP);
         robot.type(KeyCode.ENTER);
+        robot.clickOn("#AddToCart");
+        robot.clickOn("#stockfield");
+        robot.write("1");
+        robot.clickOn("#addtoshoppingcartbutton");
+        robot.clickOn("#backbutton");
+        robot.clickOn("#ShoppingCart");
+        robot.clickOn("#FinishCommand");
+        robot.clickOn("#BackButton");
+        robot.clickOn("#logoutbutton");
+        robot.clickOn("#registrationbutton");
 
-        robot.clickOn("#Delete");
-        assertThat(robot.window("Delete Products")).isShowing();
 
+        robot.clickOn("#firstname");
+        robot.write(USER_2);
+        robot.clickOn("#lastname");
+        robot.write(USER_2);
+        robot.clickOn("#username");
+        robot.write(USER_2);
+        robot.clickOn("#password");
+        robot.write(USER_2);
+        robot.clickOn("#role");
+        robot.type(KeyCode.DOWN);
+        robot.type(KeyCode.ENTER);
+        robot.clickOn("#email");
+        robot.write(USER_2);
+
+        robot.clickOn("#registerbutton");
+        UserService.CloseDatabase();
+
+        robot.clickOn("#username");
+        robot.write(USER_2);
+        robot.clickOn("#password");
+        robot.write(USER_2);
+
+        robot.clickOn("#signinbutton");
+
+
+        robot.clickOn("#seeallordersbutton");
+        robot.clickOn("#ShowOrder");
+        assertThat(robot.lookup("#ShowAllOrdersMessage").queryText()).hasText("Select an order!");
+
+        robot.type(KeyCode.UP);
+        robot.type(KeyCode.ENTER);
+        robot.clickOn("#ShowOrder");
+        assertThat(robot.window("Show All Orders")).isShowing();
     }
 }
