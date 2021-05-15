@@ -291,6 +291,8 @@ public class ShoppingCartController
         else
         {
             ShoppingCartMessage.setText("The list is empty!");
+            orders.close();
+            shopping.close();
         }
     }
 
