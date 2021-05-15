@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a6e5f60-6bf7-4444-8596-6d65dd5335d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/loose/fis/proiect/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +62,43 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.loose.fis.proiect" />
       <recent name="org.loose.fis.proiect.controllers" />
       <recent name="org.loose.fis.proiect.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SeeAllOrdersTest">
+  <component name="RunManager" selected="JUnit.MainTest">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.testmain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MagazinEchipamenteSportive" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.loose.fis.proiect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.loose.fis.proiect" />
+      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.MainTest" />
+      <option name="METHOD_NAME" value="testmain(org.testfx.api.FxRobot)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductsListClientTest.testseeproductslistclient" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MagazinEchipamenteSportive" />
       <extension name="coverage">
@@ -79,22 +110,6 @@
       <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
       <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.ProductsListClientTest" />
       <option name="METHOD_NAME" value="testseeproductslistclient(org.testfx.api.FxRobot)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductsListManagerTest.testseeproductslistmanager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MagazinEchipamenteSportive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.ProductsListManagerTest" />
-      <option name="METHOD_NAME" value="testseeproductslistmanager(org.testfx.api.FxRobot)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,36 +145,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeeClientDetailsTest.testseeclientdetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MagazinEchipamenteSportive" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.loose.fis.proiect.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.loose.fis.proiect.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.loose.fis.proiect.controllers.SeeClientDetailsTest" />
-      <option name="METHOD_NAME" value="testseeclientdetails(org.testfx.api.FxRobot)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.SeeClientDetailsTest.testseeclientdetails" />
-      <item itemvalue="JUnit.ProductsListManagerTest.testseeproductslistmanager" />
       <item itemvalue="JUnit.ProductsListClientTest.testseeproductslistclient" />
       <item itemvalue="JUnit.SeeAllHisOrdersTest" />
       <item itemvalue="JUnit.SeeAllOrdersTest" />
+      <item itemvalue="JUnit.MainTest.testmain" />
+      <item itemvalue="JUnit.MainTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="JUnit.MainTest.testmain" />
         <item itemvalue="JUnit.SeeAllOrdersTest" />
         <item itemvalue="JUnit.SeeAllHisOrdersTest" />
         <item itemvalue="JUnit.ProductsListClientTest.testseeproductslistclient" />
-        <item itemvalue="JUnit.ProductsListManagerTest.testseeproductslistmanager" />
-        <item itemvalue="JUnit.SeeClientDetailsTest.testseeclientdetails" />
       </list>
     </recent_temporary>
   </component>
