@@ -42,7 +42,7 @@ class SeeAllOrdersTest {
     }
 
     @Test
-    void testseeallorders(FxRobot robot) {
+    static void testseeallorders(FxRobot robot) {
         UserService.initDatabase();
         robot.clickOn("#firstname");
         robot.write(USER_1);
