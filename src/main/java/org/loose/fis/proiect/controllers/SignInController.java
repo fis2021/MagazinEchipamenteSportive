@@ -107,6 +107,7 @@ public class SignInController
                     else
                     {
                         SignInMessage.setText("Incorrect Password!");
+                        database.close();
                     }
                   break;
                 }
@@ -115,6 +116,10 @@ public class SignInController
                         SignInMessage.setText("Incorrect Username!");
                     }
             }
+        }
+        if(!database.isClosed())
+        {
+            database.close();
         }
 
     }
