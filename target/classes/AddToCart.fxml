@@ -20,7 +20,7 @@
 
     <Label text="Stock:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
 
-    <TextField fx:id="stockfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <TextField fx:id="stockfield" id="stockfield" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
     <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
 
